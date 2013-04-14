@@ -1,0 +1,28 @@
+Die Testumgebung dient als Fernsteuerung für den Client. Sie soll den voll-
+ständigen Zustand des kompletten P2P-VCS anzeigen. Sie soll auch die Möglich-
+keit bieten, jede mögliche Operation anzustoßen. Sie simuliert einen Benutzer
+des angedachten Systems (etwa des MOFLON Integrators TiE-DEA).
+
+Die möglichen Zustände sind folgende:
+- kein Dokument vorhanden
+- Quelldokument vorhanden
+- Linkdokument vorhanden
+- Zieldokument vorhanden
+- Quell-/Linkdokument vorhanden
+- Quell-/Zieldokument vorhanden
+- Link-/Zieldokument vorhanden
+- Quell-/Link-/Zieldokument vorhanden
+
+Die möglichen Operationen sind folgende:
+- neues Dokument erzeugen
+- inkrementelle Vorwärtstransformation
+- Dokument bearbeiten
+- Linkdokument zu Quelldokument laden
+- Linkdokument zu Zieldokument laden
+- Quelldokument zu Linkdokument laden
+- Zieldokument zu Linkdokument laden
+
+Die GUI enthält:
+- ein Panel zur Steuerung der Anbindung an P2P
+- ein Panel mit Buttons, die Operationen auslösen
+- ein Panel mit einer Übersicht

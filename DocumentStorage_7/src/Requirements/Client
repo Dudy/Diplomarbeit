@@ -1,0 +1,9 @@
+
+Interface:
+- Bootadresse (IP Adresse mit Port) vorgeben/auslesen
+- lokalen Bind Port vorgeben/auslesen
+
+
+Operationen:
+- P2P Connect
+- P2P Disconnect

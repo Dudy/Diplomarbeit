@@ -1,0 +1,27 @@
+        Id idSource1 = getIdFactory().buildId("source1");
+        Id idLink1 = getIdFactory().buildId("link1");
+        Id idTarget1 = getIdFactory().buildId("target1");
+        
+        System.out.println("Id(source1) = " + idSource1.toStringFull());
+        System.out.println("Id(link1) = " + idLink1.toStringFull());
+        System.out.println("Id(target1) = " + idTarget1.toStringFull());
+        
+        String idSourceString1 = idSource1.toStringFull();
+        String idLinkString1 = idLink1.toStringFull();
+        String idTargetString1 = idTarget1.toStringFull();
+        
+        byte[] byteArraySource1 = idSource1.toByteArray();
+        
+        Id idTestSource1 = getIdFactory().buildId(idSourceString1);
+        Id idTestSource2 = getIdFactory().buildId(byteArraySource1);
+        
+        System.out.println("idTestSource1 = " + idTestSource1);
+        System.out.println("idTestSource2 = " + idTestSource2);
+        
+Id(source1) = E1F6B07DF76AB4A741BF5F178871B511182059BA
+Id(link1) = DE8585805221D1B1E1DC3AEF818D1C25FD612C86
+Id(target1) = FE8D16E6A8F0685EB423D8E23A483697F5B76E9E
+idTestSource1 = <0xEF314B..>
+idTestSource2 = <0xE1F6B0..>
+
+-------------------------------------------------------------------------------------------

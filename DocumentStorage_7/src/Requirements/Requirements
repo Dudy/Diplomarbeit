@@ -1,0 +1,24 @@
+Das Programm (DocumentStorage) besteht aus einem Client und einer Testumgebung.
+Der Client ist ein unabhängiger P2P Client, der die VCS Serverfunktionalität
+zur Verfügung stellt. Er kann von beliebigen anderen Systemen als Versionie-
+rungssubsystem verwendet werden.
+Die Testumgebung stellt ein solches Fremdsystem dar. Sie besteht aus einer
+Benutzeroberfläche, mit der alle Funktionen des Clients gesteuert werden
+können. Außerdem sieht man im Testsystem den jeweiligen Zustand des P2P
+Versionierungssystems.
+
+Ein Client selbst ist in drei Teile gegliedert: einen P2P Teil, den der Client
+zur Kommunikation nutzt, einen VCS Teil, mit dem der Client Dokumente versio-
+niert lokal speichert und einen Interfaceteil, über den der Client von externen
+Anwendungen verwendet wird.
+
+Die Testumgebung ist ebenfalls dreigeteilt, folgt dabei jedoch dem MVC Entwurfs-
+muster. Ein Teil stellt die grafische Benutzeroberfläche dar (view), der zweite
+die Logik (control), die Aktionen des Benutzers behandelt, die Daten im P2P Netz
+manipuliert und die Ergebnisse auf der GUI darstellt, der dritte Teil schließ-
+lich besteht aus einer Schnittstelle zum P2P Netz, das als Datencontainer
+dient (model).
+
+Es wird vorerst nur auf Dokumenttripel gearbeitet, wobei jedes Dokument selbst
+aus bis zu drei Artefakten bestehen kann (XMI Export des Modells, anwendungs-
+spezifische Datei und Metadaten).

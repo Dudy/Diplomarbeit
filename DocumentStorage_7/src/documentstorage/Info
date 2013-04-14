@@ -1,0 +1,54 @@
+dummy repository:
+
+Step   Source   Link   Target    action
+  1       -       -       -      new source (create)
+  2       1       -       -      forward(source) => new link, new target
+  3       1       1       1      new source (edit)
+  4       2       1       1      new source (edit)
+  5       3       1       1      forward(source) => old link, new target
+  6       3       1       2      new source (edit)
+  7       4       1       2      forward(source) => old link, old target
+  8       4       1       2      new target (edit)
+  9       4       1       3      backward(target) => old source, old link
+ 10       4       1       3      new target (edit)
+ 11       4       1       4      new target (edit)
+ 12       4       1       5      new link (edit)
+ 13       4       2       5      new target (edit)
+ 14       4       2       6      backward(target) => new source, new link
+ 15       5       3       6      new target (edit)
+ 16       5       3       7      backward(target) => new source, old link
+ 17       6       3       7
+
+possible actions before commit:
+- new source (create or edit)
+- new link (create or edit)
+- new target (create or edit)
+- forward(source) => old link, old target
+- forward(source) => old link, new target
+- forward(source) => new link, new target
+- backward(target) => old source, old link
+- backrward(target) => new source, old link
+- backward(target) => new source, new link
+
+consistent tripels are:
+(1,1,1)
+(3,1,2)
+(4,1,2) Tag: customer release candidate V0.9
+(4,1,3) Tag: customer release V1.0
+(5,3,6)
+(6,3,7)
+-------------------------------------------------------------------------------
+Apache Log Level
+ALL   (Debug, Error, Fatal, Info, Trace, Warn)      -2147483648
+TRACE (Debug, Error, Fatal, Info, Trace, Warn)             5000
+DEBUG (Debug, Error, Fatal, Info,        Warn)            10000
+INFO  (       Error, Fatal, Info,        Warn)            20000
+WARN  (       Error, Fatal,              Warn)            30000
+ERROR (       Error, Fatal                   )            40000
+FATAL (              Fatal                   )            50000
+OFF   (                                      )       2147483647
+
+
+
+
+

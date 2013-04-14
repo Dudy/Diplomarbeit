@@ -1,0 +1,4 @@
+- teste Performanz: wie oft pro Sekunde kann ein Client eine Nachricht
+  nach Test ignorieren (also in der Nachricht z.B. a=1, Nachricht wird
+  ignoriert, wenn eigener Counter > 1, eigener Counter startet mit 0,
+  bekommt immer a aufaddiert)
